@@ -43,7 +43,6 @@ client.on('interactionCreate', async interaction => {
 });
 client.on("guildMemberAdd", (member) => {
     let channel = member.guild.channels.cache;
-  
     let embed = new Discord.MessageEmbed()
     .setThumbnail(client.config.logo)
     .addField(`:point_right: Bienvenue !`,`Salut, bienvenue à <@${member.user.id}>!`, true)
