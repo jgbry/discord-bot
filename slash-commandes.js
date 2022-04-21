@@ -13,8 +13,6 @@ for (const file of commandFiles) {
 
 const rest = new REST({ version: '9' }).setToken(require('./config.json').token);
 
-rest.put(Routes.applicationCommands(clientId), {
-        body: commands
-    })
+rest.put(Routes.applicationCommands(clientId), { body: commands })
     .then(() => console.log("Commandes d'application enregistrées avec succès."))
     .catch(console.error);
