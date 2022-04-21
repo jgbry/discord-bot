@@ -9,7 +9,7 @@ C'est un bot discord créé avec Discord.js v13
 
 ## 🛠 Comment le configurer ?
 
-//config.json
+config.json
 ```json
 {
     "clientId": "ID Publique du Bot",
@@ -28,7 +28,7 @@ node slash-commandes.js # Pour initier les commandes slash
 node index.js # Pour démarrer le bot
 ```
 
-## 📝 Serveur Support
+## 📝 [Serveur Support](https://discord.gg/krZQgUVx6j)
 Si vous rencontrez des problèmes avec le bot, rejoignez-nous et demandez de l'aide.
 
 ## Fait avec ❤️ !
