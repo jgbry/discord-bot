@@ -1,0 +1,8 @@
+{
+    "clientId": "ID Publique du Bot",
+    "welcome_channel": "ID du salon de bienvenue",
+
+    "nom": "Nom à afficher en bas des commandes",
+    "logo":"Logo à afficher sur les commandes",
+    "token" : "Token du privé bot"
+}
