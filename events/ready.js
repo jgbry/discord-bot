@@ -4,4 +4,3 @@ module.exports = {
     console.log('Le bot est désormais fonctionnel !')
   },
 };
-
