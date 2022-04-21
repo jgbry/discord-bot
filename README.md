@@ -27,4 +27,7 @@ node slash-commandes.js # Pour initier les commandes slash
 node index.js # Pour démarrer le bot
 ```
 
+## 📝 Serveur Support
+Si vous rencontrez des problèmes avec le bot, rejoignez-nous et demandez de l'aide.
+
 ## Fait avec ❤️ !
