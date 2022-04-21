@@ -1,4 +1,4 @@
-# Discord Bot
+# 🤖 Discord Bot
 
 C'est un bot discord créé avec Discord.js v13
 
@@ -7,21 +7,22 @@ C'est un bot discord créé avec Discord.js v13
 * Node.js 16+
 * Discord.js 13+
 
-## Comment le configurer ?
+## 🛠 Comment le configurer ?
 
-```json
 //config.json
+```json
 {
     "clientId": "ID Publique du Bot",
     "welcome_channel": "ID du salon de bienvenue",
 
     "nom": "Nom à afficher en bas des commandes",
     "logo":"Logo à afficher sur les commandes",
-    "token" : "Token du privé bot" // https://discord.com/developers/applications/
+    "token" : "Token du privé bot"
 }
 ```
+Pour obtenir un token, rendez-vous sur https://discord.com/developers/applications/
 
-## Comment le démarrer ?
+## 🟢 Comment le démarrer ?
 ```bash
 node slash-commandes.js # Pour initier les commandes slash
 node index.js # Pour démarrer le bot
