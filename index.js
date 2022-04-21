@@ -48,7 +48,7 @@ client.on("guildMemberAdd", (member) => {
     .setThumbnail(client.config.logo)
     .addField(`:point_right: Bienvenue !`,`Salut, bienvenue à <@${member.user.id}>!`, true)
     .addField(`:zap: Notre Serveur`, `Nombre de membres : ${member.guild.memberCount}`, true)
-    .setColor("GREEN")
+    .setColor("BLUE")
     channel.find((channel) => channel.id === client.config.welcome_channel).send({ embeds: [embed] });
 });
 client.login(require('./config.json').token);
