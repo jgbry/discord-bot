@@ -17,7 +17,7 @@ config.json
 
     "nom": "Nom à afficher en bas des commandes",
     "logo":"Logo à afficher sur les commandes",
-    "token" : "Token du privé bot"
+    "token" : "Token du bot"
 }
 ```
 Pour obtenir un token, rendez-vous sur https://discord.com/developers/applications/
