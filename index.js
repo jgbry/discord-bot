@@ -1,17 +1,21 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const config = require('./config.json');
+const { REST } = require('@discordjs/rest');
+const { Routes } = require('discord-api-types/v9');
 
 const client = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS],
 });
 const Discord = require('discord.js');
 
-client.discord = Discord;   
+client.discord = Discord;
 client.config = config;
 
 client.commands = new Collection();
+const commands = [];
 const commandFiles = fs.readdirSync('./commandes').filter(file => file.endsWith('.js'));
+
 
 for (const file of commandFiles) {
     const command = require(`./commandes/${file}`);
@@ -41,13 +45,21 @@ client.on('interactionCreate', async interaction => {
         });
     };
 });
+
+const rest = new REST({ version: '9' }).setToken(config.token);
+
+rest.put(Routes.applicationCommands(config.clientId), { body: commands })
+    .then(() => console.log("Commandes d'application enregistrées avec succès."))
+    .catch(console.error);
+
+
 client.on("guildMemberAdd", (member) => {
     let channel = member.guild.channels.cache;
     let embed = new Discord.MessageEmbed()
-    .setThumbnail(client.config.logo)
-    .addField(`:point_right: Bienvenue !`,`Salut, bienvenue à <@${member.user.id}>!`, true)
-    .addField(`:zap: Notre Serveur`, `Nombre de membres : ${member.guild.memberCount}`, true)
-    .setColor("BLUE")
+        .setThumbnail(client.config.logo)
+        .addField(`:point_right: Bienvenue !`, `Salut, bienvenue à <@${member.user.id}>!`, true)
+        .addField(`:zap: Notre Serveur`, `Nombre de membres : ${member.guild.memberCount}`, true)
+        .setColor("BLUE")
     channel.find((channel) => channel.id === client.config.welcome_channel).send({ embeds: [embed] });
 });
 client.login(require('./config.json').token);
