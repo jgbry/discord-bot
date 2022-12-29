@@ -24,7 +24,6 @@ Pour obtenir un token, rendez-vous sur https://discord.com/developers/applicatio
 
 ## 🟢 Comment le démarrer ?
 ```bash
-node slash-commandes.js # Pour initier les commandes slash
 node index.js # Pour démarrer le bot
 ```
 
