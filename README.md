@@ -1,4 +1,4 @@
-# 🤖 Discord Bot
+# 🤖 Discord Bot (DEPRECATED !!!) 
 
 C'est un bot discord créé avec Discord.js v13
 
